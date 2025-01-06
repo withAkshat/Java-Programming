@@ -22,6 +22,15 @@ public class Que {
         System.out.print($); //No error
 
          */
+
+         Scanner sc = new Scanner(System.in);
+
+         int rad = sc.nextInt();
+
+         double area = 3.14 * rad * rad ;
+
+         System.out.print(area);
+
     }
     
 }
