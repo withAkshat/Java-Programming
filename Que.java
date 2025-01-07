@@ -29,7 +29,7 @@ public class Que {
 
          double area = 3.14 * rad * rad ;
 
-         System.out.print(area);
+         System.out.print("The area of circle:" + area);
 
     }
     
