@@ -130,6 +130,82 @@ public class Main {
         // System.out.println(exp2);
 
         // System.out.print( 5 & 3 );
-        System.out.print( 4 | 8 );
+        // System.out.print( 4 | 8 );
+
+
+        // Scanner sc = new Scanner(System.in);
+        // int A = sc.nextInt();
+
+        // if (A % 2 == 0){
+        //     System.out.println("A is even");
+        // }
+        // else{
+        //     System.out.println("A is odd");
+        // }
+
+        // Scanner sc = new Scanner(System.in);
+
+        
+        // int income = sc.nextInt() ;
+        // int tax;
+
+        // if ( income <= 500000 ){
+        //     tax = (int) (income * 0) ;
+        //     System.out.print("Your tax amount "+tax);
+        // }
+
+        // else if( income > 500000 && income < 1000000 ){
+        //     tax = (int) (income * 0.2);
+        //     System.out.print("Your tax amount "+tax);
+        // }
+
+        // else{
+        //     tax = (int) (income * 0.3);
+        //     System.out.print("Your tax amount "+tax);
+        // }
+
+        // int A , B , C ;
+
+        // A = 10;
+        // B = 3;
+        // C = 4;
+
+        // if (A>B && A>C){
+        //     System.out.print("A is Largest as " + A);
+        // }
+        // else if ( B>C ){
+        //     System.out.print("B is Largest as" + B);
+        // }
+        // else{
+        //     System.out.print("C is Largest as" + C);
+        // }
+
+
+        // Scanner sc = new Scanner(System.in);
+        // int Marks = sc.nextInt() ;
+
+        // String Status = (Marks>=33)?"Pass":"Fail";
+
+        // System.out.print(Status);
+        
+
+        int number = 2;
+
+        switch(number){
+            case 1:
+                    System.out.print("Fan is on");
+                    break;
+
+            case 2:
+                System.out.print("Light is on");
+                break;
+
+            case 3: 
+                System.out.print("Ac is on");
+
+            default:
+                System.out.print("No Happend");
+                break;
+        }
     }
 }
