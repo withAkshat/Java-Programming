@@ -189,23 +189,158 @@ public class Main {
         // System.out.print(Status);
         
 
-        int number = 2;
+        // int number = 2;
 
-        switch(number){
-            case 1:
-                    System.out.print("Fan is on");
-                    break;
+        // switch(number){
+        //     case 1:
+        //             System.out.print("Fan is on");
+        //             break;
 
-            case 2:
-                System.out.print("Light is on");
-                break;
+        //     case 2:
+        //         System.out.print("Light is on");
+        //         break;
 
-            case 3: 
-                System.out.print("Ac is on");
+        //     case 3: 
+        //         System.out.print("Ac is on");
 
-            default:
-                System.out.print("No Happend");
-                break;
+        //     default:
+        //         System.out.print("No Happend");
+        //         break;
+        // }
+
+
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter the no.");
+        // int n = sc.nextInt();
+        // int sum = 0;
+        
+        // int i= 1 ;
+        // while ( i <= n ){
+            
+        //     sum = sum + i;
+        //     i++;
+        // }
+        // System.out.print("sum " + sum);
+        // // System.out.print("Printed Hello World 10 times....!!");
+
+
+        // for(int row = 1; row <= 4; row++){
+        //     System.out.println("* * * *");
+        // }
+        
+        // int row = 1;
+        
+        // while( row <= 4 ){
+        //     System.out.println("* * * *");
+        //     row++;
+        // }
+
+
+        // int n = 80085;
+        // int  rev = 0;
+
+        // while(n>0){
+            
+        //     int lastDigit = n % 10;
+        //     rev = (rev * 10) + lastDigit;
+        //     n = n / 10; //Yahan loop ruka hai..!!
+            
+        // }
+
+        // System.out.print(rev);
+
+
+        // Do while loop
+
+        // int counter =1;
+        // do{
+        //     System.out.println("Hello World!");
+        //     counter++;
+        // }
+        // while( counter<=10 );
+
+
+        // Scanner sc = new Scanner(System.in);
+        
+        // while(true){
+        //     System.out.print("Enter any no ");
+        //     int n = sc.nextInt();
+
+        //     if ( n % 10 == 0 ){
+        //         break;
+        //     }
+
+        //     System.out.println(n);
+
+        // }
+
+
+
+
+
+        // int i=1;
+        //     do{
+                
+        
+        //         // if(i==3){
+        //         //     continue;
+        //         // }
+            
+        //         System.out.println(i);
+        //         i++;
+        //     }
+        //     while( i<=5 ); 
+        
+        
+        // for(int i=1; i<=5; i++){
+
+        //     if(i==3){
+        //         continue;
+        //     }
+
+        //     System.out.println(i);
+
+        // }
+
+
+        // int i= 1;
+        // while(i<= 5){
+
+        //     System.out.println(i);
+        //     if(i==3){
+        //                 continue;
+        //             }
+        //     i++;
+        // }
+
+
+        // Prime Nos
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number ");
+        int num = sc.nextInt();
+
+        if( num == 2){
+            System.out.print( num +"is prime no");
         }
+        else{
+
+            boolean isPrime = true;
+            for( int i = 2; i <= Math.sqrt(num); i++ ){
+                if( num % i == 0 ){
+                    isPrime = false;
+                }
+            }
+
+            if( isPrime == true){
+                System.out.println(num +" is not prime");
+            }
+            else{
+                System.out.println(num +" is not prime");
+            }
+
+        }
+
     }
 }

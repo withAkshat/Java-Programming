@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Que {
 
@@ -117,19 +117,19 @@ public class Que {
 
 
         //Leap Year Problem
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter year");
-        int year = sc.nextInt();
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter year");
+        // int year = sc.nextInt();
 
-        if( year%4==0 && year%100!=0 ){
-            System.out.print("Leap Year");
-        }
-        else if ( year%4==0 && year%100!=0 && year%400==0 ){
-            System.out.print("Leap year");
-        }
-        else{
-            System.out.print("Not a Leap year");
-        }
+        // if( year%4==0 && year%100!=0 ){
+        //     System.out.print("Leap Year");
+        // }
+        // else if ( year%4==0 && year%100!=0 && year%400==0 ){
+        //     System.out.print("Leap year");
+        // }
+        // else{
+        //     System.out.print("Not a Leap year");
+        // }
 
         // if ( year % 4 == 0 ){
         //     if ( year % 100 == 0 ){
