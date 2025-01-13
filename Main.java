@@ -340,7 +340,10 @@ public class Main {
                 System.out.println(num +" is not prime");
             }
 
+
         }
+
+        
         sc.close();
     }
 }
