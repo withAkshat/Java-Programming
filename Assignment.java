@@ -64,6 +64,7 @@ public class Assignment {
 
             System.out.println(n + " * " + i + " = " + n*i);
         }
+        sc.close();
 
     }
 
