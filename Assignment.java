@@ -55,16 +55,30 @@ public class Assignment {
 
         // Multiplication Table
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a Number");
+        // Scanner sc = new Scanner(System.in);
+        // System.out.print("Enter a Number");
     
-        int n = sc.nextInt();
+        // int n = sc.nextInt();
 
-        for( int i = 1; i<=10; i++ ){
+        // for( int i = 1; i<=10; i++ ){
 
-            System.out.println(n + " * " + i + " = " + n*i);
-        }
-        sc.close();
+        //     System.out.println(n + " * " + i + " = " + n*i);
+        // }
+
+
+    System.out.print(noAvg(3,0,2));    
+        
+    }
+    
+    // sc.close();
+    
+    
+    // average of three nos..
+    public static float noAvg(float a , float b , float c){
+
+        float avg = (a + b + c)/3;
+
+        return avg;
 
     }
 
