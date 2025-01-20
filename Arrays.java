@@ -2,21 +2,21 @@ import java.util.*;
 
 public class Arrays {
 
-    public static void update(int Arr[]){
+    public static void update(int Arr[]) {
 
-        for(int i =0; i<Arr.length; i++){
+        for (int i = 0; i < Arr.length; i++) {
 
-            Arr[i] = Arr[i]+1;
+            Arr[i] = Arr[i] + 1;
 
         }
 
     }
 
-    public static int linearSearch(int Arr[], int key){
+    public static int linearSearch(int Arr[], int key) {
 
-        for( int i = 0; i< Arr.length; i++ ){
+        for (int i = 0; i < Arr.length; i++) {
 
-            if( Arr[i] == key ){
+            if (Arr[i] == key) {
 
                 return i;
             }
@@ -26,47 +26,96 @@ public class Arrays {
 
     }
 
-    public static void largestNum(int arr[]){
+    public static void largestNum(int arr[]) {
 
         int val = Integer.MIN_VALUE; // - Infinite
 
-        for ( int i=0; i<arr.length; i++ ){
+        for (int i = 0; i < arr.length; i++) {
 
-            if( arr[i]> val ){
-                val=arr[i];
+            if (arr[i] > val) {
+                val = arr[i];
             }
         }
 
-        System.out.print("Largest Value is Array is:"+val);
+        System.out.print("Largest Value is Array is:" + val);
 
     }
 
-    public static int binarySearch( int arr[] , int key){
+    public static int binarySearch(int arr[], int key) {
 
-        int start = 0 , end = arr.length-1;
+        int start = 0, end = arr.length - 1;
 
-        while ( start <= end ){
+        while (start <= end) {
 
-            int mid = (start + end)/2;
+            int mid = (start + end) / 2;
 
-            if ( arr[mid]  == key ){
-                 return mid;
+            if (arr[mid] == key) {
+                return mid;
             }
 
-            else if ( arr[mid] > key ){
-                end = mid -1;
+            else if (arr[mid] > key) {
+                end = mid - 1;
             }
 
-            else if ( arr[mid] < key ){
-                start = mid +1;
+            else if (arr[mid] < key) {
+                start = mid + 1;
             }
 
-            
         }
         return -1;
     }
-    
-    public static void main(){
+
+    public static void reverseArr(int arr[]) {
+
+        int first = 0, last = arr.length - 1;
+
+        while (first < last) {
+
+            int temp = arr[last];
+            arr[last] = arr[first];
+            arr[first] = temp;
+
+            // First and last position elements change their position which terminates the
+            // loop condition..
+
+            first++;
+            last--;
+        }
+
+    }
+
+    public static void printPairs(int arr[]) {
+
+        int tp = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int curr = arr[i];
+            for (int j = i + 1; j < arr.length; j++) {
+
+                System.out.print("(" + curr + "," + arr[j] + ") ");
+                tp++;
+            }
+            System.out.println();
+        }
+        System.out.print("Total No of pairs are: " + tp);
+    }
+
+    public static void subArrays(int arr[]) {
+
+        for (int i = 0; i < arr.length; i++) {
+            int start = i;
+            for (int j = i; j < arr.length; j++) {
+                int end = j;
+                for(int k = start; k<=end; k++){
+                    System.out.print(arr[k]+ " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+
+        }
+    }
+
+    public static void main() {
 
         // int Arr[] = new int[50];
 
@@ -78,7 +127,7 @@ public class Arrays {
 
         // System.out.println("Marks of Physics:"+ Arr[0]);
         // System.out.println("Marks of Chem:"+ Arr[1]);
-        
+
         // Arr[2]= Arr[2] + 10;
         // System.out.println("Marks of Maths:"+ Arr[2]);
         // float per = (Arr[0]+Arr[1]+Arr[2])/3;
@@ -91,11 +140,11 @@ public class Arrays {
 
         // for ( int i=0; i<Arr.length; i++ ){
 
-        //     System.out.println("Arr "+ i+" " + Arr[i]);
+        // System.out.println("Arr "+ i+" " + Arr[i]);
 
         // }
 
-        //Linear Search!!
+        // Linear Search!!
 
         // int nums[]= {9,19,99,10,89,0};
 
@@ -104,12 +153,11 @@ public class Arrays {
         // int res = linearSearch(nums,key);
 
         // if( res == -1 ){
-        //     System.out.print("NOT FOUND");
+        // System.out.print("NOT FOUND");
         // }
         // else{
-        //     System.out.print("Found at index:" + res);
+        // System.out.print("Found at index:" + res);
         // }
-
 
         // Largest Number Search
 
@@ -117,20 +165,41 @@ public class Arrays {
 
         // largestNum(nums);
 
-        
         // Binary Search
 
-        int nums[]= {1,2,3,4,5,6,7,8};
+        // int nums[]= {1,2,3,4,5,6,7,8};
 
-        int res = binarySearch(nums, 6);
+        // int res = binarySearch(nums, 6);
 
-        if(res == -1){
-            System.out.println("NOT FOUND!");
-        }
-        else{
-            System.out.println("Found at:"+ res);
-        }
+        // if(res == -1){
+        // System.out.println("NOT FOUND!");
+        // }
+        // else{
+        // System.out.println("Found at:"+ res);
+        // }
 
+        // Reverse Array
+
+        // int nums[]= {1,2,3,4,5,6,7,8};
+
+        // reverseArr(nums);
+
+        // for ( int i =0; i< nums.length; i++ ){
+
+        // System.out.print(nums[i]+" ");
+        // }
+
+        // Print Pairs
+
+        // int nums[] = { 2, 4, 6, 8 };
+
+        // printPairs(nums);
+
+        // subArrays
+
+        int nums[] = { 2, 4, 6, 8 };
+
+        subArrays(nums);
 
     }
 
