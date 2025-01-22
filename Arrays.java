@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Arrays {
@@ -115,6 +116,82 @@ public class Arrays {
         }
     }
 
+    public static void maxSubArraySum( int arr[] ){
+
+        int max = Integer.MIN_VALUE;
+        int curr = 0;
+
+        int prefix[] =  new int[arr.length];
+
+        prefix[0] = arr[0];
+        
+        // Creating Prefix Array...
+        for(int i=1; i < arr.length; i++){
+            prefix[i] = prefix[i-1] + arr[i];
+        }
+        
+        for(int i=0; i < prefix.length; i++){
+            // prefix[i] = prefix[i-1] + arr[i];
+            System.out.print(prefix[i]+ " ");
+        }
+        
+        for ( int i = 0; i < prefix.length; i++ ){
+            for ( int j = i; j < prefix.length; j++ ){
+                
+                curr = i==0 ? prefix[j] : prefix[j] - prefix[i-1];
+
+                    if( curr > max  ){
+                        
+                        max = curr;
+                    }
+            //     for ( int k = i; k<= j; k++ ){
+            //         curr = curr + arr[k];
+            //     }
+            //     System.out.print(curr);
+                
+            //     curr = 0;
+            //     System.out.println();
+                
+            // }
+
+        }
+    }
+    System.out.println( "Sum of max Sub Array " + max);
+
+    }
+
+    public static void kadans( int arr[] ){
+
+        int maxSum = Integer.MIN_VALUE;
+        int currSum = 0;
+
+        for( int i = 0; i < arr.length; i++ ){
+            currSum = currSum + arr[i];
+            if( currSum <= 0){
+                currSum = 0 ;
+            }
+            if( currSum > maxSum ){
+                maxSum = currSum;
+            }
+        }
+        System.out.print("Sum of max Sub Array " + maxSum);
+
+    }
+
+    public static void kadansNeg( int arr[] ){
+
+        int maxSum = Integer.MIN_VALUE;
+        int currSum = 0;
+
+        for( int i = 0; i < arr.length; i++ ){
+            
+            currSum = Math.max(arr[i], currSum + arr[i] );
+            maxSum = Math.max(currSum , maxSum);
+        }
+        System.out.print("Sum of max Sub Array " + maxSum);
+
+    }
+
     public static void main() {
 
         // int Arr[] = new int[50];
@@ -195,11 +272,33 @@ public class Arrays {
 
         // printPairs(nums);
 
-        // subArrays
+        
+        // // subArrays
 
-        int nums[] = { 2, 4, 6, 8 };
+        // int nums[] = { 2, 4, 6, 8 };
 
-        subArrays(nums);
+        // subArrays(nums);
+
+
+        // // maxSubArraySum
+
+        // int nums[] = { 1,-2,6,-1,3};
+
+        // maxSubArraySum(nums);
+
+
+        // Kadans Algorithm
+
+        // int nums[] = { 1,-2,6,-1,3};
+
+        // kadans(nums);
+
+
+        //Kadans Algo for negative no
+
+        int numN[] = {-4,-1,-2,-3};
+        
+        kadansNeg(numN);
 
     }
 
