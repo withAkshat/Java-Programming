@@ -182,7 +182,6 @@ public class Arrays {
 
         int maxSum = Integer.MIN_VALUE;
         int currSum = 0;
-
         for( int i = 0; i < arr.length; i++ ){
             
             currSum = Math.max(arr[i], currSum + arr[i] );
@@ -296,9 +295,9 @@ public class Arrays {
 
         //Kadans Algo for negative no
 
-        int numN[] = {-4,-1,-2,-3};
+        // int numN[] = {-4,-1,-2,-3};
         
-        kadansNeg(numN);
+        // kadansNeg(numN);
 
     }
 
