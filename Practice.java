@@ -1,50 +1,5 @@
-// public class Practice {
-
-//     public static int binarySearch( int arr[] , int key ){
-
-//         int start = 0 , end = arr.length -1;
-
-//         for ( int i = 0; i< arr.length; i++ ){
-
-//             int mid = (start + end)/2;
-
-//             if( arr[mid] == key ){
-
-//                 return mid;
-//             }
-
-//             if ( arr[mid] > key ){
-//                 end = mid -1;
-
-//             }
-
-//             else{
-//                 start = mid+1;
-//             }
-
-//         }
-
-//         return -1;
-
-//     }
-
-//     public static void main(String args[]){
-
-//         int nums[] = { 1,2,3,4,5,6 };
-        
-//         int res = binarySearch( nums , 5);
-
-//         if ( res == -1){
-
-//             System.out.print("Element Not Found!");
-//         }
-//         else{
-//             System.out.print("Element Found at Index: " + res);
-//         }
-
-//     }
-    
-// }
+import java.util.Arrays;
+import java.util.*;.*;
 
 
 class Practice {
@@ -68,14 +23,65 @@ class Practice {
                 return new int[]{};
                 
             }
+
+        public static void stringCompression(){
+
+            String a = "aabccc";
+
+            StringBuilder sb = new StringBuilder(" ");
+
+            for(int i = 0; i < a.length(); i++){
+                Integer count = 1; 
+
+                while ( i < a.length() -1 && a.charAt(i) == a.charAt(i+1) ){
+                    i++;
+                    count ++;
+                }
+                sb.append(a.charAt(i));
+
+                if( count > 1 ){
+                    sb.append( count.toString() );
+                }
+
+            }
+            System.out.print(sb);
+
+        }
+
+        public static void lowerCaseVowels(){
+
+            String s = "apnaCollege";
+            char ch[] = s.toCharArray();
+
+            int count = 0;
+            for( int i=0; i<ch.length; i++ ){
+                if(ch[i]=='a'|| ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u'){
+
+                count++;
+
+                }
+            }
+
+            System.out.print(count);
+        }
+
         
-            public static void main(String args[]){
+public static void main(String args[]){
         
-                int arr[] = {3,2,4};
+        // int arr[] = {3,2,4};
         
-                int res[] = twoSum(arr , 6); 
+        // int res[] = twoSum(arr , 6); 
+
+        // System.out.print("["+res[0]+ "," + res[1]+"]"); 
+
+        // stringCompression();
 
 
-                System.out.print("["+res[0]+ "," + res[1]+"]"); 
+        // String st = "aaaappo";
+        // System.out.println(st.replace( 'a' , 'x' ));
+        // System.out.print(st);
+    
+    lowerCaseVowels();    
+        
         }
 }

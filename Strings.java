@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Strings {
 
     public static void palindrome() {
@@ -25,6 +27,37 @@ public class Strings {
             // .equals() method
         }
 
+    }
+
+    public static boolean palindromeAdv( String s ){
+
+        int n = s.length();
+        StringBuilder sb = new StringBuilder();
+    
+
+        for ( int i =0 ; i< n; i++ ){
+          
+            if ( Character.isLetterOrDigit(s.charAt(i)) ){
+                sb.append(Character.toLowerCase(s.charAt(i)));
+            }
+            
+        }
+
+        int i = 0 , j = sb.length()-1;
+
+        while ( i<= j ){
+
+            if(sb.charAt(i) != sb.charAt(j)){
+                return false;
+
+            }else {
+                i++;
+                j--;
+            }
+            
+
+        }
+        return true;
     }
 
     public static float shortestDist(String path) {
@@ -158,6 +191,45 @@ public class Strings {
         return newStr;
     }
 
+public static void isAnagram(){
+
+    // Anagrams are same into multiple strings (even count) ex. ate = eat
+    
+    String str1 = "tea";
+    String str2 = "ate";
+
+    char arr[] = str1.toCharArray(); //["t", "e" , "a"]
+    char arr2[] = str2.toCharArray(); //["a", "t" , "e"]
+
+    Arrays.sort(arr);  // Sorting takes O(nlog(n)) time complexity as n is no of character in string
+    // arr.length = 3(n) O(nlogn)
+    
+    Arrays.sort(arr2);
+    // arr2.length = 3(m) O(mlogm)
+
+
+    // O(nlogn + mlogm)!!
+
+    System.out.print(Arrays.equals(arr,arr2));
+    
+
+}
+
+
+public static void stringPool(){
+
+    String str1 = new String("Akshat"); // String object -> heap!
+    String str2 = "Akshat"; // String literal -> String pool
+
+    str1=str1.intern(); // str1 heap -> String pool 
+
+    System.out.print(str1==str2);
+
+
+}
+
+
+
     public static void main() {
         // concat();
         // palindrome();
@@ -179,11 +251,22 @@ public class Strings {
     //    String res = toUpperCase() ;
     //    System.out.print(res);
 
-        String str = "aabbcc";
+        // String str = "aabbcc";
 
-        String res = compression(str);
+        // String res = compression(str);
 
-        System.out.print(res);
+        // System.out.print(res);
+
+
+        //  Advance Palindrome
+        // String s = "A man, a plan, a canal: Panama";
+        // System.out.print(palindromeAdv(s));
+
+
+        // Anagram
+        // isAnagram();
+
+        stringPool();
 
 
     }
