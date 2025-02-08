@@ -1,5 +1,5 @@
 import java.util.Arrays;
-import java.util.*;.*;
+import java.util.*;
 
 
 class Practice {
@@ -65,6 +65,25 @@ class Practice {
             System.out.print(count);
         }
 
+public static boolean sortedArr(int[] arr , int i) {
+
+    
+    if( i == arr.length-1 ){
+        return true;
+    }
+    
+    if ( arr[i] > arr[i+1] ){
+        return false;
+    }
+    
+    System.out.println(sortedArr(arr, i+1));
+    return sortedArr(arr, i+1);
+
+    // Searh in chat gpt why ture is being printed 7 times..!!
+    
+
+}
+
         
 public static void main(String args[]){
         
@@ -81,7 +100,29 @@ public static void main(String args[]){
         // System.out.println(st.replace( 'a' , 'x' ));
         // System.out.print(st);
     
-    lowerCaseVowels();    
+    // lowerCaseVowels();    
+
+
+    // String name = "aman";
+
+    // char arr[] = name.toCharArray();
+    // arr[0] = 'e';
+
+    // name = new String(arr);
+
+    // System.out.print(name);
+
+        // int a = 1, b= 4;
+
+        // a = a+1 ;
+        // b = b+2 ;
+        
+        // System.out.print(a+" "+b);
+        
+        int[] arr = {1,2,3,4};
+        
+        sortedArr(arr , 0);
+    
         
         }
 }
